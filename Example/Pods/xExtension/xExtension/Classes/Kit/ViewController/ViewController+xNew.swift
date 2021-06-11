@@ -9,6 +9,14 @@ import Foundation
 
 extension UIViewController {
     
+    /// 实例化默认视图控制器
+    /// - Returns: 实例化对象
+    @objc open class func xDefaultViewController() -> Self
+    {
+        let vc = UIViewController()
+        return vc as! Self
+    }
+    
     /// 通过storyboard实例化
     /// - Parameters:
     ///   - name: storyboard名称，传nil则跟当前类相同名称

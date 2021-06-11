@@ -12,9 +12,9 @@ extension NSObject {
     /// 数据信息结构
     public struct xObjectInfoStruct {
         /// 命名空间
-        var space : String = ""
+        public var space : String = ""
         /// 名称
-        var name : String = ""
+        public var name : String = ""
         
         /// 初始化数据信息结构对象
         /// - Parameters:
