@@ -33,7 +33,7 @@ open class xPushAlertViewController: UIViewController {
     // MARK: - Open Func
     /// 实例化对象
     /// - Returns: 对象
-    open class func quickInstancetype() -> Self {
+    open override class func xDefaultViewController() -> Self {
         let vc = xPushAlertViewController()
         return vc as! Self
     }

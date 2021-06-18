@@ -39,8 +39,8 @@ open class xAlertViewController: UIViewController {
     
     // MARK: - Open Func
     /// 实例化对象
-    /// - Returns: 对象
-    open class func quickInstancetype() -> Self {
+    /// - Returns: 对象 
+    open override class func xDefaultViewController() -> Self {
         let vc = xAlertViewController()
         return vc as! Self
     }
