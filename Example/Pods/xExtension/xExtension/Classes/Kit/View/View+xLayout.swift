@@ -35,8 +35,8 @@ extension UIView {
         let layout = NSLayoutConstraint.init(item: self,
                                              attribute: attr1,
                                              relatedBy: relation,
-                                             toItem: .none,
-                                             attribute: attr1,
+                                             toItem: nil,
+                                             attribute: .notAnAttribute,
                                              multiplier: multiplier,
                                              constant: constant)
         self.addConstraint(layout)

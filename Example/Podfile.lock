@@ -1,11 +1,8 @@
 PODS:
-  - xAlert (1.0.4):
-    - xDefine
-    - xExtension
   - xDefine (1.0.2)
-  - xExtension (1.0.6)
-  - xManager (1.0.2):
-    - xAlert
+  - xExtension (1.0.8):
+    - xDefine
+  - xManager (1.0.3):
     - xDefine
     - xExtension
 
@@ -14,7 +11,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/kaibuleite/xSpecs.git:
-    - xAlert
     - xDefine
     - xExtension
 
@@ -23,10 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  xAlert: 4ca680cb65998bc291e02c163121db8fd4bbcf53
   xDefine: 0df7b51c0e6edb71ca9fd667f728699d0a7a1b12
-  xExtension: d141e757ab53a7e0ab73de4cf652d43554c5f80d
-  xManager: 64b1615dd4b64d85b55df57adeb22f1a17cbecf8
+  xExtension: f53765a72cdb40b8dd8106f37c426d7b4084ba05
+  xManager: 3b79d2c7f42277ba8ca15a941cfa7270dc041968
 
 PODFILE CHECKSUM: 4064f757fdbdab2c74fc3de420f0c023d6c92923
 

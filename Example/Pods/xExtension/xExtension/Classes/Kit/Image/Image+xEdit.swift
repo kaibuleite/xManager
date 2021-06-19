@@ -9,26 +9,6 @@ import Foundation
 
 extension UIImage {
     
-    // MARK: - 重新绘制图片
-    /// 重新绘制图片
-    /// - Parameters:
-    ///   - rect: 绘制范围
-    ///   - path: 绘制路径（裁剪路径）
-    /// - Returns: 新图片
-    func xDraw(rect : CGRect,
-               path : UIBezierPath) -> UIImage?
-    {
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-        guard let ctx = UIGraphicsGetCurrentContext() else { return nil }
-        ctx.interpolationQuality = .none   // 高质量
-        ctx.addPath(path.cgPath)
-        ctx.clip()
-        self.draw(in: rect)
-        let ret = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return ret
-    }
-    
     // MARK: - 图片缩放
     /// 缩放图片(等比例)
     /// - Parameter size: 缩放大小
@@ -85,6 +65,26 @@ extension UIImage {
         let path = UIBezierPath.init(rect: rect)
         let ret = self.xDraw(rect: rect,
                              path: path)
+        return ret
+    }
+    
+    // MARK: - 重新绘制图片
+    /// 重新绘制图片
+    /// - Parameters:
+    ///   - rect: 绘制范围
+    ///   - path: 绘制路径（裁剪路径）
+    /// - Returns: 新图片
+    func xDraw(rect : CGRect,
+               path : UIBezierPath) -> UIImage?
+    {
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+        guard let ctx = UIGraphicsGetCurrentContext() else { return nil }
+        ctx.interpolationQuality = .none   // 高质量
+        ctx.addPath(path.cgPath)
+        ctx.clip()
+        self.draw(in: rect)
+        let ret = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         return ret
     }
     

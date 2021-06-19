@@ -197,13 +197,11 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/xAlert/xAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xDefine/xDefine.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xExtension/xExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xManager/xManager.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/xAlert/xAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xDefine/xDefine.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xExtension/xExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/xManager/xManager.framework"
