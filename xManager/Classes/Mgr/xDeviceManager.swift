@@ -128,7 +128,7 @@ public class xDeviceManager: NSObject {
         return false
     }
     
-    // MARK: - Public Func
+    // MARK: - 拨打电话
     /// 拨打电话
     /// - Parameter phone: 电话
     public static func call(phone : String)
@@ -139,6 +139,7 @@ public class xDeviceManager: NSObject {
         UIApplication.shared.openURL(url)
     }
     
+    // MARK: - 开关手电筒状态
     /// 设置手电筒状态
     /// - Parameter isOn: 是否打开
     public static func setFlashLight(_ torchMode: AVCaptureDevice.TorchMode)
