@@ -1,6 +1,0 @@
-framework module xAlert {
-  umbrella header "xAlert-umbrella.h"
-
-  export *
-  module * { export * }
-}

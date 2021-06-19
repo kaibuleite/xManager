@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/xAlert" "${PODS_CONFIGURATION_BUILD_DIR}/xDefine" "${PODS_CONFIGURATION_BUILD_DIR}/xExtension" "${PODS_CONFIGURATION_BUILD_DIR}/xManager"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/xDefine" "${PODS_CONFIGURATION_BUILD_DIR}/xExtension" "${PODS_CONFIGURATION_BUILD_DIR}/xManager"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/xAlert/xAlert.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/xDefine/xDefine.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/xExtension/xExtension.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/xManager/xManager.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/xDefine/xDefine.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/xExtension/xExtension.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/xManager/xManager.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "xAlert" -framework "xDefine" -framework "xExtension" -framework "xManager"
+OTHER_LDFLAGS = $(inherited) -framework "xDefine" -framework "xExtension" -framework "xManager"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
