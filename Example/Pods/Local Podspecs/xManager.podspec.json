@@ -1,7 +1,8 @@
 {
   "name": "xManager",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "summary": "A short description of xManager.",
+  "swift_versions": "5",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/kaibuleite/xManager",
   "license": {
@@ -13,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/kaibuleite/xManager.git",
-    "tag": "1.0.4"
+    "tag": "1.0.6"
   },
   "platforms": {
     "ios": "9.0"
@@ -27,5 +28,6 @@
     "xExtension": [
 
     ]
-  }
+  },
+  "swift_version": "5"
 }

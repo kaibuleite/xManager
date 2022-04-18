@@ -1,8 +1,8 @@
 PODS:
   - xDefine (1.0.4)
-  - xExtension (1.1.1):
+  - xExtension (1.1.2):
     - xDefine
-  - xManager (1.0.4):
+  - xManager (1.0.6):
     - xDefine
     - xExtension
 
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   xDefine: ca6c6eef825544db8b43409e66dbff05eca7ac58
-  xExtension: 70d1f6b92b268f1e36236f8be26ed86c72628a0b
-  xManager: 36f71dfb6ed454d486d6f4549238ae62c41107a6
+  xExtension: c0850b5b3c3103c3e57a5be8acdd402daaf02c16
+  xManager: ed67ff429388fe1ba43fc8e8aea93af2d3ca71c0
 
 PODFILE CHECKSUM: 4064f757fdbdab2c74fc3de420f0c023d6c92923
 
