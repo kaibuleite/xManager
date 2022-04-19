@@ -54,7 +54,8 @@ public class xDeviceManager: NSObject {
     /// 是否是iPAd
     public static var isPad : Bool
     {
-        let ret = UI_USER_INTERFACE_IDIOM() == .pad
+//        let ret = UI_USER_INTERFACE_IDIOM() == .pad
+        let ret = UIDevice.current.userInterfaceIdiom == .pad
         return ret
     }
     
