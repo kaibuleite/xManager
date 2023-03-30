@@ -10,20 +10,23 @@ import xExtension
 
 public class xAppManager: NSObject {
 
+    // MARK: - Enum
+    /// App运行模式
+    public enum AppRunMode {
+        case debug
+        case release
+    }
+    
     // MARK: - Public Property
     /// 单例
     public static let shared = xAppManager()
     private override init() { }
     
-    // TODO: - 应用配置
-    /// 是否是测试环境
-    public var isDebug = true
-    /// 是否打印控制台信息
-    public var isLog = true
-    /// 是否打印xModel参数缺少信息
-    public var isLogModelNoPropertyTip = false
+    // MARK: - 应用配置
+    //public let xAppRunMode = AppRunMode.debug
+    public let xAppRunMode = xAppManager.AppRunMode.release
     
-    // TODO: - 常用参数（可编辑）
+    // MARK: - 常用参数（可编辑）
     /// 主题色
     public var themeColor = UIColor.xNew(hex: "#487FFC")
     /// TableView背景色
@@ -41,7 +44,7 @@ public class xAppManager: NSObject {
     /// 占位图_横幅
     public var placeholderImage_banner = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
     
-    // TODO: - 应用信息
+    // MARK: - 应用信息
     /// 名称
     public static var appBundleName : String {
         let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleName")
