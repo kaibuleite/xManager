@@ -39,6 +39,27 @@ public class xDeviceManager: NSObject {
         }
         return unknown
     }
+    /// UDID
+    public static var UDID : String {
+        print("========== 读取钥匙串中的UDID...")
+        let key = (xAppManager.appBundleID + ".UDID")
+        var udid = ""
+        if let data = xKeychainManager.shared.query(valueForKey: key) {
+            if let obj = String.init(data: data, encoding: .utf8) {
+                udid = obj
+                print("========== 获取成功 UDID = \(obj)")
+            }
+        }
+        if udid.count == 0 {
+            let obj = xDeviceManager.UUID
+            print("========== 获取失败，新UDID = \(obj)")
+            if let data = obj.data(using: .utf8) {
+                xKeychainManager.shared.save(value: data, forKey: key)
+            }
+            udid = obj
+        }
+        return udid
+    }
     /// UUID
     public static var UUID : String {
         let ret = NSUUID.init().uuidString

@@ -66,4 +66,5 @@ public class xAppManager: NSObject {
         let ret = name as? String ?? ""
         return ret
     }
+    
 }
