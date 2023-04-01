@@ -17,32 +17,28 @@ public class xAppManager: NSObject {
         case release
     }
     
-    // MARK: - Public Property
-    /// 单例
-    public static let shared = xAppManager()
-    private override init() { }
-    
     // MARK: - 应用配置
+    /// 运行环境
     //public let xAppRunMode = AppRunMode.debug
-    public let xAppRunMode = xAppManager.AppRunMode.release
+    public static var runMode = xAppManager.AppRunMode.release
     
-    // MARK: - 常用参数（可编辑）
+    // MARK: - 常用参数
     /// 主题色
-    public var themeColor = UIColor.xNew(hex: "#487FFC")
+    public static var themeColor = UIColor.xNew(hex: "#487FFC")
     /// TableView背景色
-    public var tableViewBackgroundColor = UIColor.groupTableViewBackground
+    public static var tableViewBackgroundColor = UIColor.groupTableViewBackground
     /// 导航栏背景色
-    public var navigationBarColor = UIColor.xNew(hex: "F7F6F6")
+    public static var navigationBarColor = UIColor.xNew(hex: "F7F6F6")
     /// 导航栏背阴影线条景色
-    public var navigationBarShadowColor = UIColor.lightGray
+    public static var navigationBarShadowColor = UIColor.lightGray
     /// 占位色
-    public var placeholderColor = UIColor.xNew(hex: "F5F5F5")
+    public static var placeholderColor = UIColor.xNew(hex: "F5F5F5")
     /// 占位图_默认
-    public var placeholderImage = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
+    public static var placeholderImage = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
     /// 占位图_头像
-    public var placeholderImage_avatar = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
+    public static var placeholderImage_avatar = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
     /// 占位图_横幅
-    public var placeholderImage_banner = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
+    public static var placeholderImage_banner = UIColor.xNew(hex: "F5F5F5").xToImage(size: .init(width: 5, height: 5))
     
     // MARK: - 应用信息
     /// 名称

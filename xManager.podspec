@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'xManager'
-  s.version          = '1.0.9'
+  s.version          = '1.1.0'
   s.summary          = 'A short description of xManager.'
   s.swift_version    = '5'      # Swift版本号
 

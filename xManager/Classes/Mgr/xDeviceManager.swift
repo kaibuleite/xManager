@@ -10,11 +10,6 @@ import AdSupport
 import AVKit
 
 public class xDeviceManager: NSObject {
-
-    // MARK: - Public Property
-    /// 单例
-//    public static let shared = xDeviceManager()
-//    private override init() { }
     
     // MARK: - 设备信息
     /// 系统版本
