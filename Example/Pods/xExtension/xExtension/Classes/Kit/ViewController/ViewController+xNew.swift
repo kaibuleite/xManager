@@ -40,4 +40,37 @@ extension UIViewController {
             return vc as! Self
         }
     }
+    /// 通过storyboard实例化
+    /// - Parameters:
+    ///   - name: storyboard名称，传nil则跟当前类相同名称
+    ///   - identifier: 身份标识
+    /// - Returns: 实例化对象
+    public class func xNewStoryboard(name : String? = nil,
+                                     identifier : String = "") -> Self
+    {
+        return self.xNew(storyboard: name, identifier: identifier)
+    }
+    
+    /// 通过xib实例化
+    /// - Parameters:
+    ///   - name: xib名称，传nil则跟当前类相同名称
+    /// - Returns: 实例化对象
+    public class func xNew(xib name : String? = nil) -> Self
+    {
+        var str = name ?? ""
+        if str.count == 0 {
+            str = self.xClassInfoStruct.name
+        }
+        let bundle = Bundle.init(for: self.classForCoder())
+        return Self.init(nibName: str, bundle: bundle)
+    }
+    /// 通过xib实例化
+    /// - Parameters:
+    ///   - name: xib名称，传nil则跟当前类相同名称
+    /// - Returns: 实例化对象
+    public class func xNewXib(name : String? = nil) -> Self
+    {
+        return self.xNew(xib: name)
+    }
+    
 }

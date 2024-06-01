@@ -3,7 +3,7 @@ source 'https://github.com/kaibuleite/xSpecs.git'
 
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '13.0'
 
 target 'xManager_Example' do
   pod 'xManager', :path => '../'
